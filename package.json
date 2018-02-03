@@ -1,0 +1,25 @@
+{
+  "name": "hugo-boilerplate",
+  "version": "1.0.0",
+  "description": "Hugo boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nateluzod/hugo-boilerplate.git"
+  },
+  "keywords": [
+    "hugo",
+    "tachyons",
+    "travis",
+    "cucumber"
+  ],
+  "author": "Nate Luzod",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nateluzod/hugo-boilerplate/issues"
+  },
+  "homepage": "https://github.com/nateluzod/hugo-boilerplate#readme"
+}
