@@ -1,25 +1,52 @@
 {
   "name": "hugo-boilerplate",
   "version": "1.0.0",
-  "description": "Hugo boilerplate",
+  "description": "Starting point for Hugo projects",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "dev": "concurrently --kill-others \"hugo server --disableFastRender\" \"gulp\""
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/nateluzod/hugo-boilerplate.git"
+    "url": "git+https://github.com/nateluzod/hugo-boilerplate.git"
   },
   "keywords": [
     "hugo",
-    "tachyons",
-    "travis",
-    "cucumber"
+    "static",
+    "boilerplate",
+    "tailwind"
   ],
   "author": "Nate Luzod",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/nateluzod/hugo-boilerplate/issues"
   },
-  "homepage": "https://github.com/nateluzod/hugo-boilerplate#readme"
+  "homepage": "https://github.com/nateluzod/hugo-boilerplate#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.2.3",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "child_process": "^1.0.2",
+    "concurrently": "^3.5.1",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-inject": "^4.3.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.1",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-uncss": "^1.0.6",
+    "gulp-watch": "^4.3.11",
+    "hugo-bin": "^0.18.1",
+    "path": "^0.12.7",
+    "postcss": "^6.0.14",
+    "tailwindcss": "^0.4.0"
+  }
 }
