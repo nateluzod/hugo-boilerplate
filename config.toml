@@ -55,4 +55,6 @@ publishDir = "dist"
 
 [params]
     google_analytics_id = "test"
+    theme_color = "#ff6600"
+    tile_color = "#ff6600"
     favicon = "/_img/favicon.jpg"
