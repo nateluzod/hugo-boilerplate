@@ -2,10 +2,12 @@
   "name": "hugo-boilerplate",
   "version": "1.0.0",
   "description": "Starting point for Hugo projects",
-  "main": "index.js",
+  "main": "./static/bundle.js",
+  "head": "./static/head.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build",
+    "rollup": "rollup ./src/js/index.js --output.format iife --output.file ./static/bundle.js",
     "dev": "concurrently --kill-others \"hugo server --disableFastRender\" \"gulp\""
   },
   "repository": {
@@ -31,6 +33,7 @@
     "child_process": "^1.0.2",
     "concurrently": "^3.5.1",
     "cssnano": "^3.10.0",
+    "domready": "^1.0.8",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
     "gulp-concat": "^2.6.1",
@@ -47,6 +50,11 @@
     "hugo-bin": "^0.18.1",
     "path": "^0.12.7",
     "postcss": "^6.0.14",
-    "tailwindcss": "^0.4.0"
+    "rollup-plugin-commonjs": "^8.3.0",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-uglify": "^3.0.0",
+    "tailwindcss": "^0.4.0",
+    "turbolinks": "^5.1.1",
+    "webpack": "^3.10.0"
   }
 }

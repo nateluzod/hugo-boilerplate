@@ -1,4 +1,4 @@
-baseURL = "https://summitsync.com/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Hugo Boilerplate"
 publishDir = "dist"
