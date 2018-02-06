@@ -1,0 +1,4 @@
+<!-- {{ .Type }} input - {{ .Name }} -->
+<input type="{{ .type | default "text" }}" name="{{ .name | default "field-name" }}" id="{{ .id | default "field-id" }}" placeholder="{{ .placeholder | default "placeholder" }}"
+    class="{{ .classes | default "classes" }} py-4 px-6 proxima-nova text-lg" 
+    {{ if(.required) }} required="required" {{ end }}>

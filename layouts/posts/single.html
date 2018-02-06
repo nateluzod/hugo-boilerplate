@@ -1,0 +1,9 @@
+{{ define "main" }}
+    <h1>{{ .Title }}</h1>
+    <time datetime="{{ .Date }}">
+        {{ dateFormat "Monday, January 2, 2006" .Date }}
+    </time>
+    {{ .Content }}
+{{ end }}
+{{ define "scripts" }}
+{{ end }}

@@ -1,0 +1,60 @@
+{{ define "hero" }}
+    {{ if .Params.Hero }}
+        {{ partial "modules/hero.html" . }}
+    {{ end }}    
+{{ end }}
+{{ define "main" }}
+
+    <!-- Process steps -->
+    {{ with .Params.process_steps }}
+        {{ partial "modules/process-steps" . }}
+    {{ end }}    
+
+    <!-- Sliding infopanel -->
+    {{ partial "modules/sliding-infopanel" (dict "slides" .Params.slides) }}
+    
+    <!-- Panels -->
+    {{ partial "modules/descriptor-panels" (dict "panels" .Params.panels) }}
+    
+    <!-- CTA -->
+    {{ with .Params.cta }}
+        {{ partial "modules/cta" . }}
+    {{ end }}
+{{ end }}
+
+{{ define "scripts" }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /* Slider */
+            $('#sliding-infopanel').slick({
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                arrows: true,
+                responsive: [
+                {
+                    breakpoint: 1100,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                      }
+                    }
+                ]                
+              });
+
+              /* Panels */
+              function iteratePanel() {
+                if($('.process-step:last').hasClass('active')) {
+                    $('.process-step:last').removeClass('active');
+                    $('.process-step:first').addClass('active');
+                } else {
+                    $('.process-step.active').removeClass('active').next('li').addClass('active');
+                }
+              }
+                          
+              $('.process-step').first().addClass('active')
+
+              setInterval(iteratePanel, 3000);
+        });
+    </script>
+{{ end }}

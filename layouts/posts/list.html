@@ -1,0 +1,18 @@
+{{ define "main" }}
+    <h1>Posts</h1>
+    {{ .Content }}
+    {{ range .Pages }}
+        <h1>
+            <a href="{{ .Permalink }}">
+            {{ .Title }}
+            </a>
+        </h1>
+        <time datetime="{{ .Date }}">
+            {{ dateFormat "Monday, January 2, 2006" .Date }}
+        </time>
+        <p>{{ .Summary }}</p>
+        <hr>
+    {{ end }}
+{{ end }}
+{{ define "scripts" }}
+{{ end }}

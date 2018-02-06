@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "modules/html-header.html" . }}
+  <body>
+    {{ partial "modules/global-header.html" . }}
+    {{ partial "modules/global-nav.html" . }}
+    <main>
+      {{ block "main" . }}
+      {{ end }}
+    </main>
+    {{ partial "modules/global-footer.html" . }}
+    {{ block "scripts" . }}
+    {{ end }}
+    <script src="{{ "/scripts.js" }}"></script>
+  </body>
+</html>

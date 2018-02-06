@@ -17,7 +17,6 @@ import cssnano from "cssnano"
 import nano from 'gulp-cssnano'
 import postcss from "gulp-postcss"
 import tailwindcss from "tailwindcss"
-import uncss from 'gulp-uncss'
 
 // JS
 import babel from "gulp-babel"
@@ -72,34 +71,6 @@ gulp.task("svg", ()=> {
     .pipe(gulp.dest('./static/')) 
 });
 
-gulp.task('htmlmin', function() {
-  return gulp.src(['./dist/*.html','./dist/**/*.html'])
-    .pipe($.htmlmin({
-      collapseWhitespace: true,
-      removeComments: true,
-      minifyCSS: true,
-      minifyJS: true      
-    }))
-    .pipe(gulp.dest('./dist'));
-});  
-
-
-gulp.task('uncss', function () {
-  return gulp.src('./dist/style.css')
-      .pipe(uncss({
-          html: [
-            './dist/*.html',
-            './dist/**/*.html'
-          ],
-          ignore: [
-            // Add classes to bypass  
-          ]          
-      }))
-      .pipe(nano())
-      .pipe(gulp.dest('./dist'));
-});
-
-
 // 0_0
 gulp.task('watch', () => {
   gulp.watch(PATHS.css, ['css'])
@@ -107,19 +78,13 @@ gulp.task('watch', () => {
   gulp.watch(PATHS.svg, ['svg'])
 });
 
-
 // ¯\_(ツ)_/¯
 gulp.task('default', ['watch'])
 
 // Base URL
-let baseURL;
-switch (process.env.BRANCH) {
-  case "master":
-    baseURL = process.env.URL;
-    break;
-  default:
-    baseURL = process.env.DEPLOY_PRIME_URL || "/";
-}
+let baseURL = (process.env.BRANCH === "master") 
+            ? process.env.URL 
+            : (process.env.DEPLOY_PRIME_URL || "/");
 
 // Hugo arguments
 const hugoArgsDefault = [
@@ -128,8 +93,7 @@ const hugoArgsDefault = [
   "-d",
   "./dist",
   "-s",
-  "./",
-  "-v"
+  "./"
 ];
 
 gulp.task("hugo", cb => {
@@ -142,6 +106,17 @@ gulp.task("hugo", cb => {
 gulp.task("build", ["hugo"], cb => {
   return gulp
     .src(["./dist/*.html", "./dist/**/*.html"])
+    // .pipe(
+    //   $.uncss({
+    //     html: [
+    //       './dist/*.html',
+    //       './dist/**/*.html'
+    //     ],
+    //     ignore: [
+    //       // Add classes to bypass  
+    //     ]          
+    //   }))
+    // .pipe(nano())    
     .pipe(
       $.htmlmin({
         collapseWhitespace: true,
@@ -149,7 +124,7 @@ gulp.task("build", ["hugo"], cb => {
         minifyCSS: true,
         minifyJS: true
       })
-    )
+    )    
     .pipe(gulp.dest("./dist"));
 });
 

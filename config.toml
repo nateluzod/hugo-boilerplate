@@ -1,3 +1,58 @@
-baseURL = "http://example.org/"
+baseURL = "https://summitsync.com/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Hugo Boilerplate"
+publishDir = "dist"
+
+[[menu.global]]
+    name = "Page 1"
+    identifier = "page-1"
+    url = "/page-1"
+
+[[menu.global]]
+    name = "Page 2"
+    identifier = "page-2"
+    url = "/page-2"
+
+[[menu.global]]
+    name = "Page 3"
+    identifier = "page-3"
+    url = "/page-3"
+
+[[menu.global]]
+    name = "Page 4"
+    identifier = "page-4"
+    url = "/page-4"   
+
+[[menu.global]]
+    name = "Posts"
+    identifier = "posts"
+    url = "/posts"
+
+[[menu.footer]]
+    name = "Page 1"
+    identifier = "page-1"
+    url = "/page-1"
+
+[[menu.footer]]
+    name = "Page 2"
+    identifier = "page-2"
+    url = "/page-2"
+
+[[menu.footer]]
+    name = "Page 3"
+    identifier = "page-3"
+    url = "/page-3"
+
+[[menu.footer]]
+    name = "Page 4"
+    identifier = "page-4"
+    url = "/page-4"        
+
+[[menu.footer]]
+    name = "Posts"
+    identifier = "posts"
+    url = "/posts"
+
+[params]
+    google_analytics_id = "test"
+    favicon = "/_img/favicon.jpg"

@@ -1,0 +1,16 @@
+<article
+    class="tile tile-press w-full border-grey-light border bg-cover bg-center"
+    data-linkto="{{ .Url }}">
+    <div class="m-4 px-35 pt-35 pb-150 relative z-20">
+        <a href="{{ .Url }}" class="no-underline mb-4 block">
+            <h2 class="text-lg font-normal text-black leading-normal">
+                {{ .Blurb }}
+            </h2>
+        </a>
+        <a href="{{ .Url }}" class="uppercase text-black font-bold">
+            {{ .Button_Text | default "Read More" }}
+        </a>
+    </div>
+    <img class="absolute pin-r pin-b z-20 m-4" 
+        src="{{ .Logo }}" alt="">
+</article>

@@ -1,0 +1,22 @@
+<!-- Submit button - {{ .name }} -->
+{{ if(eq .style "solid-yellow") }}
+    
+    <!-- Solid yellow button -->
+    <input type="submit" id="{{ .id | default "id" }}" value="{{ .value | default "value" }}"
+        class="text-base bg-ss-yellow hover:bg-transparent border-ss-yellow border-2 transition-bg hover:text-ss-yellow cursor-pointer text-black uppercase no-underline tracking-wide font-semibold proxima-nova rounded-sm py-4 px-8 inline-block antialiased
+        {{ .classes }}">
+
+{{ else if(eq .style "solid-gray") }}
+    
+    <!-- Solid gray button -->
+    <input type="submit" id="{{ .id | default "id" }}" value="{{ .value | default "value" }}"
+        class="text-base bg-ss-dark-gray hover:bg-transparent border-2 border-ss-dark-gray transition-bg text-white hover:text-black uppercase no-underline cursor-pointer tracking-wide font-semibold proxima-nova rounded-sm py-4 px-8 inline-block antialiased
+        {{ .classes }}">
+
+{{ else if(eq .style "hollow-yellow") }}
+    
+    <!-- Hollow yellow button -->
+    <input type="submit" id="{{ .id | default "id" }}" value="{{ .value | default "value" }}"
+        class="text-base bg-transparent hover:bg-ss-yellow transition-bg cursor-pointer text-white hover:text-black uppercase no-underline tracking-wide font-semibold proxima-nova rounded-sm py-4 px-8 inline-block border-ss-yellow border-2 antialiased
+        {{ .classes }}"> 
+{{ end }}    

@@ -1,0 +1,31 @@
+{{ if(eq .Style "solid-yellow") }}
+    
+    <!-- Solid yellow button -->
+    <a class="bg-ss-yellow hover:bg-transparent border-2 border-ss-yellow hover:text-white transition-bg text-black uppercase no-underline tracking-wide font-semibold proxima-nova rounded-sm py-4 px-8 inline-block antialiased text-center
+        {{ .Classes }}"
+        href="{{ .Link }}"
+        data-form-guid="{{ .Form }}">
+        {{ .Text }}
+    </a>
+
+{{ else if(eq .Style "solid-gray") }}
+    
+    <!-- Solid gray button -->
+    <a class="bg-ss-dark-gray border-2 border-ss-dark-gray hover:bg-transparent transition-bg text-white hover:text-ss-dark-gray uppercase no-underline tracking-wide font-semibold proxima-nova rounded-sm py-4 px-8 inline-block antialiased text-center cursor-pointer
+        {{ .Classes }}"
+        href="{{ .Link }}"
+        data-form-guid="{{ .Form }}">
+        {{ .Text }}
+    </a>
+
+{{ else if(eq .Style "hollow-yellow") }}
+    
+    <!-- Hollow yellow button -->
+    <a class="bg-transparent hover:bg-ss-yellow transition-bg text-white hover:text-black uppercase no-underline tracking-wide font-semibold proxima-nova rounded-sm py-4 px-8 inline-block border-ss-yellow border-2 antialiased text-center
+        {{ .Classes }}"
+        href="{{ .Link }}"
+        data-form-guid="{{ .Form }}">
+        {{ .Text }}
+    </a>
+
+{{ end }}

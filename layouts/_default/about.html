@@ -1,0 +1,26 @@
+{{ define "hero" }}
+    {{ if .Params.Hero }}
+        {{ partial "modules/hero.html" . }}
+    {{ end }}    
+{{ end }}
+{{ define "main" }}
+    
+    <!-- Wysiwyg -->
+    <div class="w-full lg:w-4/5 lg:max-w-4xl center clearfix pt-8 px-4">
+        {{ partial "modules/wysiwyg" (dict "classes" "text-left py-8 lg:py-50" "text" .Content) }}
+    </div>
+
+    <!-- Team -->
+    {{ with .Params.team }}
+        {{ partial "modules/team" . }}
+    {{ end }}
+
+    <!-- Press -->
+    {{ partial "modules/press-list" (dict "background" "white" "posts" .Site.Data.press) }}
+    
+    <!-- Map -->
+    {{ partial "modules/contact" . }}
+
+    <!-- Contact -->
+    {{ partial "modules/contact-form" . }}
+{{ end }}    

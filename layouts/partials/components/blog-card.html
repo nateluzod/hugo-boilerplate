@@ -1,0 +1,15 @@
+<article id="blog-{{ .Title | urlize }}"
+    class="tile tile-blog w-full border-grey-light border bg-cover bg-center"
+    data-linkto="{{ .URL }}"
+    style="background-image: url({{ .Params.thumb }});">
+    <div class="m-4 px-50 pt-50 pb-150 relative z-20">
+        <a href="{{ .URL }}" class="no-underline mb-4 block">
+            <h2 class="text-lg font-normal text-black leading-normal">
+                {{ .Params.Blurb }}
+            </h2>
+        </a>
+        <a href="{{ .URL }}" class="uppercase text-black font-bold">
+            Read More
+        </a>
+    </div>
+</article>

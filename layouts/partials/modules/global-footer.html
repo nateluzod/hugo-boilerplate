@@ -1,0 +1,14 @@
+<!-- Global footer -->
+<footer>
+    
+    <!-- Footer menu -->
+    {{ range .Site.Menus.footer }}
+        <a href="{{.URL}}">
+            {{ .Name }}
+        </a>
+    {{ end }}
+
+    <!-- Copyright -->
+    {{ .Now.Format "2006" }}
+    {{ .Site.Title }}
+</footer>

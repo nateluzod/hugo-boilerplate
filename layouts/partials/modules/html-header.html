@@ -1,0 +1,19 @@
+<head>
+  <meta charset="utf-8">
+  <title>
+    {{ .Params.Title | default "Welcome" }} | {{ .Site.Title }}
+  </title>
+  
+  <!-- Meta data -->
+  {{ partial "modules/meta-data.html" . }}
+
+  <!-- Meta icons -->
+  {{ partial "modules/meta-icons.html" . }}
+
+  <!-- Analytics -->
+  {{ if(.Site.Params.google_analytics_id) }}
+    {{ partial "modules/analytics.html" . }}
+  {{ end }}
+
+  <link rel="stylesheet" href="{{ "/style.css" }}">  
+</head>
