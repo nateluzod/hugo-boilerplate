@@ -55,3 +55,8 @@
   * @import "utilities/background-patterns";
   * @import "utilities/skew-transforms";
   */
+
+  .turbolinks-progress-bar {
+    height: 2px;
+    background-color: blue;
+  }
