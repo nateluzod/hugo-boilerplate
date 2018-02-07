@@ -82,9 +82,7 @@ gulp.task('watch', () => {
 gulp.task('default', ['watch'])
 
 // Base URL
-let baseURL = (process.env.BRANCH === "master") 
-            ? process.env.URL 
-            : (process.env.DEPLOY_PRIME_URL || "/");
+let baseURL = process.env.BASE_URL ||  "/";
 
 // Hugo arguments
 const hugoArgsDefault = [

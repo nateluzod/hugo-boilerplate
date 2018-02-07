@@ -9,8 +9,7 @@ before_script:
 
 # Build and clean
 script:
-  - 'hugo --baseURL=' $BASE_URL
-  # - node_modules/gulp/bin/gulp.js --gulpfile gulpfile.js minify
+  - node_modules/gulp/bin/gulp.js --gulpfile gulpfile.babel.js build
   
 # Deploy
 deploy:
