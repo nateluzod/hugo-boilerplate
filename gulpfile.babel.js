@@ -5,7 +5,10 @@ import concat from "gulp-concat"
 import gulp from "gulp"
 import path from 'path'
 import watch from 'gulp-watch'
-var $ = require("gulp-load-plugins")();
+import htmlmin from 'gulp-htmlmin'
+
+var runSequence = require('run-sequence')
+var $ = require("gulp-load-plugins")()
 
 // Hugo
 import hugoBin from "hugo-bin"
@@ -26,7 +29,7 @@ const PATHS = {
   css: './src/css/*.css',
   js: './src/js/*.js',
   svg: './src/svg/*.svg'
-};
+}
 
 // CSS
 gulp.task('css', () => {
@@ -39,8 +42,8 @@ gulp.task('css', () => {
       cssnano()
     ]))
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('./static/'));
-});
+    .pipe(gulp.dest('./static/'))
+})
 
 // JS
 gulp.task('js', () => {
@@ -51,7 +54,7 @@ gulp.task('js', () => {
     .pipe(concat('scripts.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./static/'))
-});
+})
 
 // svg
 gulp.task("svg", ()=> {
@@ -94,6 +97,19 @@ const hugoArgsDefault = [
   "./"
 ];
 
+// Minify HTML
+gulp.task("htmlmin", () => {
+  return gulp.src(["./dist/*.html", "./dist/**/*.html"])
+  .pipe(htmlmin({
+    collapseWhitespace: true,
+    removeComments: true,
+    minifyCSS: true,
+    minifyJS: true
+  }))
+  .pipe(gulp.dest("./dist"));
+});
+
+// Run Hugo
 gulp.task("hugo", cb => {
   buildSite(cb, [], "production")
     .on("error", cb)
@@ -101,7 +117,11 @@ gulp.task("hugo", cb => {
 });
 
 // Build/production tasks
-gulp.task("build", ["hugo"], cb => {
+gulp.task('build', function() {
+  runSequence('css', 'hugo', 'htmlmin');
+});
+
+gulp.task("buildX", ["css", "hugo"], cb => {
   return gulp
     .src(["./dist/*.html", "./dist/**/*.html"])
     // .pipe(
@@ -115,15 +135,6 @@ gulp.task("build", ["hugo"], cb => {
     //     ]          
     //   }))
     // .pipe(nano())    
-    .pipe(
-      $.htmlmin({
-        collapseWhitespace: true,
-        removeComments: true,
-        minifyCSS: true,
-        minifyJS: true
-      })
-    )    
-    .pipe(gulp.dest("./dist"));
 });
 
 /**

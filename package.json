@@ -54,6 +54,7 @@
     "rollup-plugin-commonjs": "^8.3.0",
     "rollup-plugin-node-resolve": "^3.0.2",
     "rollup-plugin-uglify": "^3.0.0",
+    "run-sequence": "^2.2.1",
     "tailwindcss": "^0.4.0",
     "turbolinks": "^5.1.1",
     "webpack": "^3.10.0"
