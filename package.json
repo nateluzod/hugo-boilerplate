@@ -28,6 +28,7 @@
   "homepage": "https://github.com/nateluzod/hugo-boilerplate#readme",
   "devDependencies": {
     "autoprefixer": "^7.2.3",
+    "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "child_process": "^1.0.2",
