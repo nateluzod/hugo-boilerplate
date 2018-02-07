@@ -7,7 +7,7 @@ before_script:
 
 # Build and clean
 script:
-  - ./node_modules/rollup/bin/rollup -c
+  - node_modules/rollup/bin/rollup -c
   - node_modules/gulp/bin/gulp.js --gulpfile gulpfile.babel.js build
   
 # Deploy
