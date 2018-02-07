@@ -101,7 +101,7 @@ gulp.task("hugo", cb => {
 });
 
 // Build/production tasks
-gulp.task("build", ["hugo"], cb => {
+gulp.task("build", ["css", "hugo"], cb => {
   return gulp
     .src(["./dist/*.html", "./dist/**/*.html"])
     // .pipe(
