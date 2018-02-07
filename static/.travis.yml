@@ -1,0 +1,23 @@
+dist: trusty
+sudo: false
+
+# Get deps
+before_script:
+# - wget -O /tmp/hugo.deb https://github.com/spf13/hugo/releases/download/v0.21/hugo_0.21_Linux-64bit.deb
+# - sudo dpkg -i /tmp/hugo.deb
+- npm install
+
+# Build and clean
+script:
+  - hugo --baseURL="http://$AWS_BUCKET_NAME.$AWS_REGION.amazonaws.com/"
+  # - node_modules/gulp/bin/gulp.js --gulpfile gulpfile.js minify
+  
+# Deploy
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: "hugo-boilerplate"
+  skip_cleanup: true
+  local_dir: public  
+  acl: public_read
