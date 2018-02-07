@@ -3,12 +3,11 @@ sudo: false
 
 # Get deps
 before_script:
-# - wget -O /tmp/hugo.deb https://github.com/spf13/hugo/releases/download/v0.21/hugo_0.21_Linux-64bit.deb
-# - sudo dpkg -i /tmp/hugo.deb
 - npm install
 
 # Build and clean
 script:
+  - rollup -c
   - node_modules/gulp/bin/gulp.js --gulpfile gulpfile.babel.js build
   
 # Deploy
