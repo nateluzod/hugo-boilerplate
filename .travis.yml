@@ -9,7 +9,7 @@ before_script:
 
 # Build and clean
 script:
-  - hugo --baseURL="http://$AWS_BUCKET_NAME.$AWS_REGION.amazonaws.com/"
+  - hugo --baseURL=$BASE_URL
   # - node_modules/gulp/bin/gulp.js --gulpfile gulpfile.js minify
   
 # Deploy
@@ -17,7 +17,7 @@ deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: "hugo-boilerplate"
+  bucket: $AWS_BUCKET
   skip_cleanup: true
-  local_dir: public  
+  local_dir: dist  
   acl: public_read
