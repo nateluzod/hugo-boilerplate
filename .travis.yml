@@ -3,7 +3,7 @@ sudo: false
 
 # Get deps
 before_script:
-- npm install
+- yarn
 
 # Build and clean
 script:
