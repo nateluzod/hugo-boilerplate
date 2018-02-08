@@ -1,13 +1,14 @@
 ---
-title: "Page 2"
-date: 2018-02-04T22:56:28-10:00
-draft: false
-meta_keywords: 
-- "keyword 1"
-- "keyword 2"
-- "keyword 3"
-meta_description: "Lorem ipsum dolor amet raw denim man bun occupy"
+title: Page 2
+date: 2018-02-04 22:56:28 -1000
+meta_keywords:
+- keyword 1
+- keyword 2
+- keyword 3
+meta_description: Lorem ipsum dolor amet raw denim man bun occupy
 meta_image: "/_img/placecage.jpg"
+type: page
+
 ---
 Cold-pressed franzen poke, hoodie butcher kombucha gochujang DIY tattooed four dollar toast pug fanny pack lo-fi kinfolk keffiyeh. Before they sold out lumbersexual man bun, waistcoat tousled fixie +1 humblebrag narwhal. Disrupt keffiyeh lumbersexual af affogato. Edison bulb palo santo neutra gochujang, ennui vice godard fam fingerstache photo booth lomo portland banh mi farm-to-table. Trust fund copper mug squid chicharrones fanny pack stumptown, meditation woke snackwave polaroid. Photo booth 3 wolf moon jianbing yuccie synth.
 

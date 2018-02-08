@@ -1,66 +1,65 @@
 baseURL = "/"
-languageCode = "en-us"
-title = "Hugo Boilerplate"
-publishDir = "dist"
 enableRobotsTXT = true
-
+languageCode = "en-us"
+publishDir = "dist"
+title = "Hugo Boilerplate"
+[[menu.footer]]
+identifier = "github"
+name = "Github"
+url = "https://github.com/nateluzod/hugo-boilerplate"
+weight = 6
+[[menu.footer]]
+identifier = "posts"
+name = "Posts"
+url = "/posts"
+weight = 5
+[[menu.footer]]
+identifier = "page-4"
+name = "Page 4"
+url = "/page-4"
+weight = 4
+[[menu.footer]]
+identifier = "page-3"
+name = "Page 3"
+url = "/page-3"
+weight = 3
+[[menu.footer]]
+identifier = "page-2"
+name = "Page 2"
+url = "/page-2"
+weight = 2
+[[menu.footer]]
+identifier = "page-1"
+name = "Page 1"
+url = "/page-1"
+weight = 1
 [[menu.global]]
-    name = "Page 1"
-    identifier = "page-1"
-    url = "/page-1"
-
+identifier = "posts"
+name = "Posts"
+url = "/posts"
+weight = 1
 [[menu.global]]
-    name = "Page 2"
-    identifier = "page-2"
-    url = "/page-2"
-
+identifier = "page-4"
+name = "Page 4"
+url = "/page-4"
+weight = 2
 [[menu.global]]
-    name = "Page 3"
-    identifier = "page-3"
-    url = "/page-3"
-
+identifier = "page-3"
+name = "Page 3"
+url = "/page-3"
+weight = 3
 [[menu.global]]
-    name = "Page 4"
-    identifier = "page-4"
-    url = "/page-4"   
-
+identifier = "page-2"
+name = "Page 2"
+url = "/page-2"
+weight = 4
 [[menu.global]]
-    name = "Posts"
-    identifier = "posts"
-    url = "/posts"
-
-[[menu.footer]]
-    name = "Page 1"
-    identifier = "page-1"
-    url = "/page-1"
-
-[[menu.footer]]
-    name = "Page 2"
-    identifier = "page-2"
-    url = "/page-2"
-
-[[menu.footer]]
-    name = "Page 3"
-    identifier = "page-3"
-    url = "/page-3"
-
-[[menu.footer]]
-    name = "Page 4"
-    identifier = "page-4"
-    url = "/page-4"        
-
-[[menu.footer]]
-    name = "Posts"
-    identifier = "posts"
-    url = "/posts"
-
-[[menu.footer]]
-    name = "Github"
-    identifier = "github"
-    url = "https://github.com/nateluzod/hugo-boilerplate"
-
+identifier = "page-1"
+name = "Page 1"
+url = "/page-1"
+weight = 5
 [params]
-    google_analytics_id = "test"
-    theme_color = "#ff6600"
-    tile_color = "#ff6600"
-    favicon = "/_img/favicon.jpg"
+favicon = "/_img/favicon.jpg"
+google_analytics_id = "test"
+theme_color = "#ff6600"
+tile_color = "#ff6600"

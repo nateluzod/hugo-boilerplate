@@ -1,15 +1,15 @@
 ---
-title: "Homepage"
-date: 2018-02-04T16:01:33-10:00
-draft: false
-meta_keywords: 
-- "keyword 1"
-- "keyword 2"
-- "keyword 3"
-meta_description: "Lorem ipsum dolor amet raw denim man bun occupy"
+title: Homepage
+date: 2018-02-04 16:01:33 -1000
+meta_keywords:
+- keyword 1
+- keyword 2
+- keyword 3
+meta_description: Lorem ipsum dolor amet raw denim man bun occupy
 meta_image: "/_img/placecage.jpg"
----
+type: page
 
+---
 Lorem ipsum dolor amet raw denim man bun occupy, ramps tumblr green juice neutra viral schlitz portland stumptown. Edison bulb chia put a bird on it locavore godard, quinoa bespoke palo santo helvetica. Direct trade brooklyn hoodie la croix. Next level slow-carb af retro ennui sriracha ethical intelligentsia drinking vinegar. Wolf small batch shabby chic affogato subway tile.
 
 Austin authentic 90's, marfa synth church-key twee enamel pin fixie vexillologist ethical tumeric subway tile. Flannel kale chips prism art party kombucha hell of. Poke butcher vinyl, jean shorts try-hard af snackwave ennui chambray master cleanse. XOXO 8-bit williamsburg yuccie poutine.

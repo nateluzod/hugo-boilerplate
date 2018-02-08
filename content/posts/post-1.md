@@ -1,13 +1,13 @@
 ---
-title: "Post 1"
-date: 2018-02-04T23:00:36-10:00
-draft: false
-meta_keywords: 
-- "keyword 1"
-- "keyword 2"
-- "keyword 3"
-meta_description: "Lorem ipsum dolor amet raw denim man bun occupy"
+title: Post 1
+date: 2018-02-04 23:00:36 -1000
+meta_keywords:
+- keyword 1
+- keyword 2
+- keyword 3
+meta_description: Lorem ipsum dolor amet raw denim man bun occupy
 meta_image: "/_img/placecage.jpg"
+
 ---
 90's cardigan mixtape, vinyl freegan sustainable bushwick iPhone kale chips enamel pin biodiesel. Celiac pour-over readymade cred disrupt iPhone. Banjo messenger bag craft beer pug, tote bag flannel typewriter iPhone bitters four loko small batch pok pok franzen. Vaporware photo booth portland butcher hammock, everyday carry meh occupy +1 street art literally. +1 messenger bag succulents, before they sold out fashion axe listicle irony marfa 90's subway tile asymmetrical master cleanse squid.
 

@@ -1,13 +1,14 @@
 ---
-title: "Page 3"
-date: 2018-02-04T22:56:31-10:00
-draft: false
-meta_keywords: 
-- "keyword 1"
-- "keyword 2"
-- "keyword 3"
-meta_description: "Lorem ipsum dolor amet raw denim man bun occupy"
+title: Page 3
+date: 2018-02-04 22:56:31 -1000
+meta_keywords:
+- keyword 1
+- keyword 2
+- keyword 3
+meta_description: Lorem ipsum dolor amet raw denim man bun occupy
 meta_image: "/_img/placecage.jpg"
+type: page
+
 ---
 Organic palo santo freegan, post-ironic vape whatever vegan dreamcatcher plaid keffiyeh iceland four loko. Disrupt asymmetrical woke hella unicorn shabby chic photo booth single-origin coffee snackwave bespoke cliche try-hard activated charcoal kale chips shaman. Cronut direct trade sustainable hella church-key godard. 3 wolf moon irony skateboard, narwhal farm-to-table ethical snackwave shaman tattooed art party food truck four loko sustainable.
 

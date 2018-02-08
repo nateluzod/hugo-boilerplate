@@ -1,13 +1,13 @@
 ---
-title: "Post 2"
-date: 2018-02-04T23:00:41-10:00
-draft: false
-meta_keywords: 
-- "keyword 1"
-- "keyword 2"
-- "keyword 3"
-meta_description: "Lorem ipsum dolor amet raw denim man bun occupy"
+title: Post 2
+date: 2018-02-04 23:00:41 -1000
+meta_keywords:
+- keyword 1
+- keyword 2
+- keyword 3
+meta_description: Lorem ipsum dolor amet raw denim man bun occupy
 meta_image: "/_img/placecage.jpg"
+
 ---
 Gastropub ethical everyday carry portland leggings vaporware pop-up vexillologist scenester banjo flexitarian paleo taiyaki disrupt. Hexagon swag migas hella. Edison bulb messenger bag pop-up, post-ironic meggings semiotics readymade mixtape master cleanse salvia iPhone. Hoodie try-hard affogato cold-pressed, beard semiotics narwhal wayfarers microdosing cornhole cray sriracha. Vegan waistcoat gluten-free enamel pin jianbing ethical keffiyeh heirloom slow-carb aesthetic skateboard four loko. Food truck forage master cleanse shoreditch helvetica activated charcoal blue bottle crucifix kogi.
 

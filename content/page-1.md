@@ -1,15 +1,15 @@
 ---
-title: "Page 1"
-date: 2018-02-04T22:55:15-10:00
-draft: false
-meta_keywords: 
-- "keyword 1"
-- "keyword 2"
-- "keyword 3"
-meta_description: "Lorem ipsum dolor amet raw denim man bun occupy"
+title: Page 1
+date: 2018-02-04 22:55:15 -1000
+meta_keywords:
+- keyword 1
+- keyword 2
+- keyword 3
+meta_description: Lorem ipsum dolor amet raw denim man bun occupy
 meta_image: "/_img/placecage.jpg"
----
+type: page
 
+---
 Lorem ipsum dolor amet lyft godard food truck pitchfork, vexillologist gluten-free iPhone. Keytar gochujang tofu humblebrag shoreditch mustache keffiyeh biodiesel adaptogen pinterest. Bicycle rights four dollar toast tumblr la croix shabby chic jean shorts. Ennui fam salvia migas, chillwave pour-over woke.
 
 Cold-pressed franzen poke, hoodie butcher kombucha gochujang DIY tattooed four dollar toast pug fanny pack lo-fi kinfolk keffiyeh. Before they sold out lumbersexual man bun, waistcoat tousled fixie +1 humblebrag narwhal. Disrupt keffiyeh lumbersexual af affogato. Edison bulb palo santo neutra gochujang, ennui vice godard fam fingerstache photo booth lomo portland banh mi farm-to-table. Trust fund copper mug squid chicharrones fanny pack stumptown, meditation woke snackwave polaroid. Photo booth 3 wolf moon jianbing yuccie synth.
