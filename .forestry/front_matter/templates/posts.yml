@@ -1,0 +1,38 @@
+---
+hide_body: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: 
+- name: meta_keywords
+  label: Meta keywords
+  type: list
+  hidden: false
+  default: 
+- name: meta_description
+  label: Meta description
+  type: text
+  hidden: false
+  default: 
+- name: meta_image
+  label: Meta image
+  type: file
+  hidden: false
+  default: 
+- name: type
+  label: Type
+  type: text
+  hidden: false
+  default: ''
+- name: draft
+  label: Draft
+  type: boolean
+  hidden: false
+  default: false
