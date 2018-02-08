@@ -7,6 +7,8 @@ import path from 'path'
 import watch from 'gulp-watch'
 import htmlmin from 'gulp-htmlmin'
 import uncss from 'gulp-uncss'
+import hugolunr from "lunr-hugo"
+// var hugolunr = require('lunr-hugo');
 
 var runSequence = require('run-sequence')
 var $ = require("gulp-load-plugins")()
@@ -82,6 +84,14 @@ gulp.task('watch', () => {
   gulp.watch(PATHS.svg, ['svg'])
 });
 
+// Create index for search
+gulp.task('index', () => {
+  const h = new hugolunr();
+  h.setInput('content/**');
+  h.setOutput('static/search.json');
+  h.index(); 
+})
+
 // ¯\_(ツ)_/¯
 gulp.task('default', ['watch'])
 
@@ -135,7 +145,7 @@ gulp.task("hugo", cb => {
 
 // Build/production tasks
 gulp.task('build', function() {
-  runSequence('css', 'hugo', 'htmlmin', 'uncss');
+  runSequence('css', 'index', 'hugo', 'htmlmin', 'uncss');
 });
 
 // Run hugo and build the site

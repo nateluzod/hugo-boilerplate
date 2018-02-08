@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build",
     "rollup": "rollup ./src/js/index.js --output.format iife --output.file ./static/bundle.js",
-    "dev": "concurrently --kill-others \"hugo server --disableFastRender\" \"gulp\""
+    "dev": "concurrently --kill-others \"hugo server --disableFastRender\" \"gulp\"",
+    "index": "./node_modules/lunr-hugo/bin/index.js -i content -o ./static/lunr.json"
   },
   "repository": {
     "type": "git",
@@ -50,6 +51,7 @@
     "gulp-uncss": "^1.0.6",
     "gulp-watch": "^4.3.11",
     "hugo-bin": "^0.18.1",
+    "lunr-hugo": "^0.1.2",
     "path": "^0.12.7",
     "postcss": "^6.0.14",
     "rollup": "^0.55.3",
