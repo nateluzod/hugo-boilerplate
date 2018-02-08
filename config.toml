@@ -54,6 +54,11 @@ enableRobotsTXT = true
     identifier = "posts"
     url = "/posts"
 
+[[menu.footer]]
+    name = "Github"
+    identifier = "github"
+    url = "https://github.com/nateluzod/hugo-boilerplate"
+
 [params]
     google_analytics_id = "test"
     theme_color = "#ff6600"

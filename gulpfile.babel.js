@@ -6,6 +6,7 @@ import gulp from "gulp"
 import path from 'path'
 import watch from 'gulp-watch'
 import htmlmin from 'gulp-htmlmin'
+import uncss from 'gulp-uncss'
 
 var runSequence = require('run-sequence')
 var $ = require("gulp-load-plugins")()
@@ -109,7 +110,19 @@ gulp.task("htmlmin", () => {
   .pipe(gulp.dest("./dist"));
 });
 
-// Run Hugo
+// Remove unused CSS classes
+gulp.task("uncss", () => {
+  return gulp.src('./dist/style.css')
+    .pipe(uncss({
+      html: [
+        './dist/*.html',
+        './dist/**/*.html',
+      ]
+    }))
+    .pipe(gulp.dest('./dist/'))
+})
+
+// Build site in /dist
 gulp.task("hugo", cb => {
   buildSite(cb, [], "production")
     .on("error", cb)
@@ -118,28 +131,10 @@ gulp.task("hugo", cb => {
 
 // Build/production tasks
 gulp.task('build', function() {
-  runSequence('css', 'hugo', 'htmlmin');
+  runSequence('css', 'hugo', 'htmlmin', 'uncss');
 });
 
-gulp.task("buildX", ["css", "hugo"], cb => {
-  return gulp
-    .src(["./dist/*.html", "./dist/**/*.html"])
-    // .pipe(
-    //   $.uncss({
-    //     html: [
-    //       './dist/*.html',
-    //       './dist/**/*.html'
-    //     ],
-    //     ignore: [
-    //       // Add classes to bypass  
-    //     ]          
-    //   }))
-    // .pipe(nano())    
-});
-
-/**
- * Run hugo and build the site
- */
+// Run hugo and build the site
 function buildSite(cb, options, environment = "development") {
   const args = options ? hugoArgsDefault.concat(options) : hugoArgsDefault;
   process.env.NODE_ENV = environment;
