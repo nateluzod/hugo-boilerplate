@@ -37,12 +37,12 @@ weight = 1
 identifier = "posts"
 name = "Posts"
 url = "/posts"
-weight = 1
+weight = 5
 [[menu.global]]
 identifier = "page-4"
 name = "Page 4"
 url = "/page-4"
-weight = 2
+weight = 4
 [[menu.global]]
 identifier = "page-3"
 name = "Page 3"
@@ -52,12 +52,12 @@ weight = 3
 identifier = "page-2"
 name = "Page 2"
 url = "/page-2"
-weight = 4
+weight = 2
 [[menu.global]]
 identifier = "page-1"
 name = "Page 1"
 url = "/page-1"
-weight = 5
+weight = 1
 [params]
 favicon = "/_img/favicon.jpg"
 google_analytics_id = "test"
