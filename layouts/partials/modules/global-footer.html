@@ -2,11 +2,15 @@
 <footer>
     
     <!-- Footer menu -->
-    {{ range .Site.Menus.footer }}
-        <a href="{{.URL}}">
-            {{ .Name }}
-        </a>
-    {{ end }}
+    <ul>
+        {{ range .Site.Menus.footer }}
+            <li>
+                <a href="{{.URL}}">
+                    {{ .Name }}
+                </a>
+            </li>
+        {{ end }}
+    </ul>
 
     <!-- Copyright -->
     {{ now.Format "2006" }}
