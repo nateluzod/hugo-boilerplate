@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="{{ "/style.css" }}">  
 
   {{ if eq (getenv "HUGO_ENV") "production" }}
+    <!-- Production-only -->
     <script src="{{ "/head.js" }}"></script>  
   {{ end }}
 </head>
-<h1>Base URL: {{ getenv "HUGO_ENV" }}</h1>
