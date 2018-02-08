@@ -118,6 +118,9 @@ gulp.task("uncss", () => {
         './dist/*.html',
         './dist/**/*.html',
         './dist/**/**/*.html'
+      ],
+      ignore: [
+        '.turbolinks-progress-bar'
       ]
     }))
     .pipe(gulp.dest('./dist/'))
