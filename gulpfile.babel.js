@@ -117,6 +117,7 @@ gulp.task("uncss", () => {
       html: [
         './dist/*.html',
         './dist/**/*.html',
+        './dist/**/**/*.html'
       ]
     }))
     .pipe(gulp.dest('./dist/'))
