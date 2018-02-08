@@ -2,6 +2,7 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Hugo Boilerplate"
 publishDir = "dist"
+enableRobotsTXT = true
 
 [[menu.global]]
     name = "Page 1"

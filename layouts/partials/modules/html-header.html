@@ -10,11 +10,15 @@
   <!-- Meta icons -->
   {{ partial "modules/meta-icons.html" . }}
 
-  <!-- Analytics -->
   {{ if(.Site.Params.google_analytics_id) }}
+    <!-- Analytics -->
     {{ partial "modules/analytics.html" . }}
   {{ end }}
 
   <link rel="stylesheet" href="{{ "/style.css" }}">  
-  <script src="{{ "/head.js" }}"></script>  
+
+  {{ if eq (getenv "HUGO_ENV") "production" }}
+    <script src="{{ "/head.js" }}"></script>  
+  {{ end }}
 </head>
+<h1>Base URL: {{ getenv "HUGO_ENV" }}</h1>
