@@ -7,8 +7,7 @@ import path from 'path'
 import watch from 'gulp-watch'
 import htmlmin from 'gulp-htmlmin'
 import uncss from 'gulp-uncss'
-import hugolunr from "lunr-hugo"
-// var hugolunr = require('lunr-hugo');
+import hugolunr from "hugo-lunr"
 
 var runSequence = require('run-sequence')
 var $ = require("gulp-load-plugins")()
@@ -85,11 +84,10 @@ gulp.task('watch', () => {
 });
 
 // Create index for search
-gulp.task('index', () => {
+gulp.task('index', () => { 
   const h = new hugolunr();
-  h.setInput('content/**');
-  h.setOutput('static/search.json');
-  h.index(); 
+  h.setOutput('src/js/search-index.json');
+  h.index();
 })
 
 // ¯\_(ツ)_/¯
