@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build",
-    "rollup": "rollup ./src/js/index.js --output.format iife --output.file ./static/bundle.js",
+    "rollup": "rollup -c",
     "dev": "concurrently --kill-others \"hugo server --disableFastRender\" \"gulp\""
   },
   "repository": {
