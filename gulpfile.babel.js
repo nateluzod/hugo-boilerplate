@@ -24,13 +24,20 @@ import postcss from "gulp-postcss"
 import tailwindcss from "tailwindcss"
 
 // JS
-import babel from "gulp-babel"
-import uglify from 'gulp-uglifyjs'
+import { rollup } from "rollup"
+import resolve from "rollup-plugin-node-resolve";
+import commonjs from "rollup-plugin-commonjs";
+import json from 'rollup-plugin-json';
+import uglify from "rollup-plugin-uglify";
 
 const PATHS = {
   css: './src/css/*.css',
   js: './src/js/*.js',
-  svg: './src/svg/*.svg'
+  svg: './src/svg/*.svg',
+  md: [
+    './content/*.md',
+    './content/**/*.md'
+  ]
 }
 
 // CSS
@@ -47,15 +54,43 @@ gulp.task('css', () => {
     .pipe(gulp.dest('./static/'))
 })
 
-// JS
-gulp.task('js', () => {
-  gulp.src(PATHS.js)
-    .pipe(babel({
-      presets: ['env']
-    }))
-    .pipe(concat('scripts.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./static/'))
+// Header Scripts
+gulp.task('jsHead', () => {
+  return rollup({
+    input: "src/js/head.js",
+    plugins: [
+      resolve(),
+      commonjs(),
+      uglify()
+    ]
+  }).then(bundle => {
+    return bundle.write({
+      file: "static/head.js",
+      treeshake: true,
+      format: "cjs"
+    })
+  })        
+})
+
+// Search Scripts
+gulp.task('jsSearch', () => {
+  return rollup({
+    input: "src/js/search.js",
+    plugins: [
+      json({
+        preferConst: true        
+      }),
+      resolve(),
+      commonjs(),
+      uglify()
+    ]
+  }).then(bundle => {
+    return bundle.write({
+      file: "static/search.js",
+      treeshake: true,
+      format: "cjs"
+    })
+  })        
 })
 
 // svg
@@ -79,8 +114,9 @@ gulp.task("svg", ()=> {
 // 0_0
 gulp.task('watch', () => {
   gulp.watch(PATHS.css, ['css'])
-  gulp.watch(PATHS.js, ['js'])
+  gulp.watch(PATHS.js,  ['jsHead', 'jsSearch'])
   gulp.watch(PATHS.svg, ['svg'])
+  gulp.watch(PATHS.md,  ['index'])
 });
 
 // Create index for search
@@ -138,13 +174,21 @@ gulp.task("uncss", () => {
 gulp.task("hugo", cb => {
   buildSite(cb, [], "production")
     .on("error", cb)
-    .on("close", cb);
-});
+    .on("close", cb)
+})
 
 // Build/production tasks
 gulp.task('build', function() {
-  runSequence('css', 'index', 'hugo', 'htmlmin', 'uncss');
-});
+  runSequence(
+    'css', 
+    'jsHead', 
+    'jsSearch', 
+    'index', 
+    'hugo', 
+    'htmlmin', 
+    'uncss'
+  )
+})
 
 // Run hugo and build the site
 function buildSite(cb, options, environment = "development") {
