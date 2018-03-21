@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build",
     "rollup": "rollup -c",
-    "dev": "concurrently --kill-others \"hugo server --disableFastRender\" \"gulp\""
+    "dev": "concurrently --kill-others \"hugo server --disableFastRender\" \"gulp\"",
+    "algolia": "atomic-algolia"
   },
   "repository": {
     "type": "git",
@@ -46,14 +47,13 @@
     "gulp-inject": "^4.3.0",
     "gulp-load-plugins": "^1.5.0",
     "gulp-postcss": "^7.0.1",
+    "gulp-run": "^1.7.1",
     "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.1",
     "gulp-uglifyjs": "^0.6.2",
     "gulp-uncss": "^1.0.6",
     "gulp-watch": "^4.3.11",
     "hugo-bin": "^0.18.1",
-    "hugo-lunr": "0.0.4",
-    "lunr": "^2.1.5",
     "param-by-name": "^1.0.1",
     "path": "^0.12.7",
     "postcss": "^6.0.14",
@@ -69,5 +69,8 @@
     "turbolinks": "^5.1.1",
     "webpack": "^3.10.0",
     "yarn": "^1.3.2"
+  },
+  "dependencies": {
+    "atomic-algolia": "^0.3.12"
   }
 }

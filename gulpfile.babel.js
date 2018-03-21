@@ -3,12 +3,12 @@
 // General
 import concat from "gulp-concat"
 import gulp from "gulp"
-import path from 'path'
-import watch from 'gulp-watch'
-import htmlmin from 'gulp-htmlmin'
-import uncss from 'gulp-uncss'
-import hugolunr from "hugo-lunr"
+import path from "path"
+import watch from "gulp-watch"
+import htmlmin from "gulp-htmlmin"
+import uncss from "gulp-uncss"
 
+var run = require("gulp-run")
 var runSequence = require('run-sequence')
 var $ = require("gulp-load-plugins")()
 
@@ -19,13 +19,13 @@ import { spawn } from "child_process"
 // Post/CSS
 import autoprefixer from "autoprefixer"
 import cssnano from "cssnano"
-import nano from 'gulp-cssnano'
+import nano from "gulp-cssnano"
 import postcss from "gulp-postcss"
 import tailwindcss from "tailwindcss"
 
 // JS
 import babel from "gulp-babel"
-import uglify from 'gulp-uglifyjs'
+import uglify from "gulp-uglifyjs"
 
 const PATHS = {
   css: './src/css/*.css',
@@ -83,13 +83,6 @@ gulp.task('watch', () => {
   gulp.watch(PATHS.svg, ['svg'])
 });
 
-// Create index for search
-gulp.task('index', () => { 
-  const h = new hugolunr();
-  h.setOutput('src/js/search-index.json');
-  h.index();
-})
-
 // ¯\_(ツ)_/¯
 gulp.task('default', ['watch'])
 
@@ -139,12 +132,24 @@ gulp.task("hugo", cb => {
   buildSite(cb, [], "production")
     .on("error", cb)
     .on("close", cb);
-});
+})
 
 // Build/production tasks
 gulp.task('build', function() {
-  runSequence('css', 'index', 'hugo', 'htmlmin', 'uncss');
-});
+  runSequence(
+    'css', 
+    'hugo', 
+    'algolia', 
+    'htmlmin', 
+    'uncss'
+  );
+})
+
+
+gulp.task('algolia', () => {
+  return run('npm run algolia').exec()
+    .pipe(gulp.dest('output'))
+})
 
 // Run hugo and build the site
 function buildSite(cb, options, environment = "development") {
