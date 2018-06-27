@@ -60,6 +60,7 @@
     "hugo-bin": "^0.29.0",
     "jump.js": "^1.0.2",
     "laravel-mix": "^2.1.11",
+    "laravel-mix-svg-sprite": "0.0.1",
     "laravel-mix-tailwind": "^0.1.0",
     "mutation-observer-inner-html-shim": "^1.0.0",
     "node-sass": "^4.9.0",

@@ -1,11 +1,13 @@
 const mix = require('laravel-mix');
 require('laravel-mix-tailwind');
+require('laravel-mix-svg-sprite');
 
 mix.js([
     'src/js/app.js'
     ], 'static/bundle.js')
     .sass('src/scss/style.scss', 'src/css/style.css')
     .tailwind()
+    .svgSprite('src/svg', 'static/sprite.svg')
     .options({
       postCss: [
         require('cssnano')({
