@@ -1,0 +1,7 @@
+#global-nav {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}

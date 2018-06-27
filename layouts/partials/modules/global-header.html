@@ -1,6 +1,36 @@
 <!-- Global header -->
-<header id="global-header" class="w-full">
+<header 
+    id="global-header" 
+    class="w-full"
+    data-controller="nav">
     <a href="/">
         {{ .Site.Title }}
     </a>
+
+    <!-- Mobile menu trigger -->
+    <button class="
+        hamburger hamburger--collapse
+        float-right
+        block" 
+        type="button"
+        data-target="nav.trigger"
+        data-action="click->nav#toggle"
+        style="outline: none;">
+        <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+        </span>
+    </button>  
+    
+    <!-- Global menu -->
+    <nav data-target="nav.menu" id="global-nav">
+        <ul>
+            {{ range .Site.Menus.global }}
+                <li>
+                    <a href="{{.URL}}">
+                        {{ .Name }}
+                    </a>
+                </li>
+            {{ end }}
+        </ul>
+    </nav>    
 </header>

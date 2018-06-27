@@ -4,7 +4,7 @@ require('laravel-mix-tailwind');
 mix.js([
     'src/js/app.js'
     ], 'static/bundle.js')
-    .sass('src/scss/tailwind.scss', 'src/css/style.css')
+    .sass('src/scss/style.scss', 'src/css/style.css')
     .tailwind()
     .options({
       postCss: [
