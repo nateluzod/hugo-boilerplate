@@ -5,7 +5,7 @@
   "main": "./static/bundle.js",
   "head": "./static/head.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && gulp build",
+    "build": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && hugo",
     "subdir": "gulp subdir",
     "dev": "concurrently --kill-others \"hugo server --disableFastRender\" \"gulp\" \"cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js\""
   },
