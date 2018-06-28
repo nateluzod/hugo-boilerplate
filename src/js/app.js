@@ -1,3 +1,4 @@
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 if (process.env.NODE_ENV === "production" && !isSafari) {
   var Turbolinks = require("turbolinks")
   Turbolinks.start()
