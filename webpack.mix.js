@@ -3,11 +3,11 @@ require('laravel-mix-tailwind');
 require('laravel-mix-svg-sprite');
 
 mix.js([
-    'src/js/app.js'
+    './src/js/app.js'
     ], 'static/bundle.js')
-    .sass('src/scss/style.scss', 'src/css/style.css')
+    .sass('./src/scss/style.scss', 'src/css/style.css')
     .tailwind()
-    .svgSprite('src/svg', 'static/sprite.svg')
+    .svgSprite('./src/svg', 'static/sprite.svg')
     .options({
       postCss: [
         require('cssnano')({
@@ -15,7 +15,6 @@ mix.js([
               removeAll: true,
           },
         }),
-        require('postcss-unprefix'),
         require('autoprefixer')({
           browsers: '>0.1%'
         })
