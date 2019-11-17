@@ -6,7 +6,7 @@
   "head": "./static/head.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && hugo",
-    "dev": "concurrently --kill-others \"hugo server\" \"cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js\""
+    "start": "concurrently --kill-others \"hugo server\" \"cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js\""
   },
   "repository": {
     "type": "git",
@@ -58,6 +58,7 @@
     "stimulus": "^1.0.1",
     "svg4everybody": "^2.1.9",
     "svgo": "^1.0.5",
+    "svgo-loader": "^2.2.1",
     "tailwindcss": "^0.4.0",
     "turbolinks": "^5.1.1",
     "uncss": "^0.16.2",

@@ -8,6 +8,36 @@ meta_keywords:
 meta_description: Lorem ipsum dolor amet raw denim man bun occupy
 meta_image: "/_img/placecage.jpg"
 type: page
+intro: I’m a developer and designer with a soft spot for non-profits and startups.  Currently serving as Technology Director for [Atlantic 57](https://atlantic57.com).
+projects:
+- title: Solve @ MIT
+  logo: mit-logo.svg
+  role: Lead Developer
+  description: The SOLVE program organizes challenges aimed at crowdsourcing solutions to some of the world's most pressing problems. I lead the engineering effort behind the web app that lets users submit business ideas, and organizes the backend workflows that the teams use to vet, judge and promote those ideas. 
+- title: World Food Program
+  logo: wfp-logo.svg
+  role: Lead Developer
+  description: Lorem ipsum dolor amet raw denim man bun occupy, ramps tumblr green juice neutra viral schlitz portland stumptown.  
+- title: American Cancer Society
+  logo: acs-logo.svg
+  role: Technology Director
+  description: Lorem ipsum dolor amet raw denim man bun occupy, ramps tumblr green juice neutra viral schlitz portland stumptown.  
+- title: Manduka Mats
+  logo: acs-logo.svg
+  role: Brand Designer
+  description: Lorem ipsum dolor amet raw denim man bun occupy, ramps tumblr green juice neutra viral schlitz portland stumptown.
+experience:
+- title: Technology Director
+  company: Atlantic 57
+  term: 2015 to Present
+  description: Lorem ipsum dolor amet raw denim man bun occupy, ramps tumblr green juice neutra viral schlitz portland stumptown.
+- title: Founder
+  company: Grid
+  term: 2009 to 2015
+  description: Lorem ipsum dolor amet raw denim man bun occupy, ramps tumblr green juice neutra viral schlitz portland stumptown.    
+profile:
+- I am a product generalist. There isn’t much that doesn’t interest me; as such I’ve served in nearly every product role since my career began.  Though I’ve worked predominantly on the technology side for the past few years, my history as a creative, a founder, and an entrepreneur gives me unique insights in my collaboration across teams. 
+- As Technology Director at Atlantic 57, I get to spend my days solving problems for the world’s leading non-profits, under the banner of one of the country’s most renowned publications. Doing work that benefits the  greater good gets me up in the morning and keeps me going until the late hours.
 
 ---
 Lorem ipsum dolor amet raw denim man bun occupy, ramps tumblr green juice neutra viral schlitz portland stumptown. Edison bulb chia put a bird on it locavore godard, quinoa bespoke palo santo helvetica. Direct trade brooklyn hoodie la croix. Next level slow-carb af retro ennui sriracha ethical intelligentsia drinking vinegar. Wolf small batch shabby chic affogato subway tile.

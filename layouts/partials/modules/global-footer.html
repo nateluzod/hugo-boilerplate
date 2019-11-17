@@ -1,17 +1,15 @@
 <!-- Global footer -->
-<footer>
-    
-    <!-- Footer menu -->
-    <ul>
-        {{ range .Site.Menus.footer }}
-            <li>
-                <a href="{{.URL}}">
-                    {{ .Name }}
-                </a>
-            </li>
-        {{ end }}
-    </ul>
+<footer 
+    class="mx-auto max-w-md border-white border-t 
+        pb-100px pt-4 mt-8 text-xs flex">
+    <div class="w-full md:w-1/2">
+        <span>&copy; {{ dateFormat "2006" now }} Nate Luzod - </span>
+        <span>Powered by <a class="text-red" href="https://gohugo.io">Hugo</a></span>
+    </div>
 
-    <!-- Copyright -->
-    {{ .Site.Title }}   
+    <div class="w-full md:w-1/2 md:text-right">
+        <a class="text-red" href="https://github.com/nateluzod">Github</a>
+        <a class="text-red" href="https://linkedin.com/in/nateluzod">LinkedIn</a>
+        <a class="text-red" href="mailto:nate.luzod@gmail.com">Email</a>
+    </div>
 </footer>

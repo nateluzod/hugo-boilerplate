@@ -2209,6 +2209,7 @@ __webpack_require__(141);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 if (false) {
   var Turbolinks = require("turbolinks");
   Turbolinks.start();

@@ -56,6 +56,9 @@ let colors = {
   'grey-lightest': '#f8fafc',
   'white': '#ffffff',
 
+  'blue': '#0B153E',
+  'red': '#BD2E2E',
+
   // 'red-darkest': '#3b0d0c',
   // 'red-darker': '#621b18',
   // 'red-dark': '#cc1f1a',
@@ -194,11 +197,12 @@ module.exports = {
 
   fonts: {
     'sans': [
+      'Public Sans',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
       // 'Segoe UI',
-      'Roboto',
+      // 'Roboto',
       // 'Oxygen',
       // 'Ubuntu',
       // 'Cantarell',
@@ -325,6 +329,8 @@ module.exports = {
     'tight': '-0.05em',
     'normal': '0',
     'wide': '0.05em',
+    'widest': '0.1em',
+    'megawide': '0.2em',
   },
 
 
@@ -629,6 +635,10 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '10px': '10px',
+    '25px': '25px',
+    '50px': '50px',
+    '100px': '100px',    
   },
 
 
@@ -657,6 +667,10 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '10px': '10px',
+    '25px': '25px',
+    '50px': '50px',
+    '100px': '100px',
   },
 
 

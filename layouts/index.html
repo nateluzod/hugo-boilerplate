@@ -1,5 +1,29 @@
 {{ define "main" }}
-    <h1>{{ .Title }}</h1>
+    
+    <!-- Intro -->
+    <p class="nested-link text-xl leading-normal mt-100px mb-50px">
+        {{ .Params.intro | markdownify }}
+    </p>
+
+    <!-- Projects -->
+    {{ partial "components/eyebrow" (dict "text" "Featured Work") }}
+    {{ range .Params.projects }}
+        {{ partial "components/project-card" . }}
+    {{ end }}
+
+    <hr />
+
+    <!-- Experience -->
+    {{ partial "components/eyebrow" (dict "text" "Experience") }}
+    {{ range .Params.experience }}
+        {{ partial "components/job-card" . }}
+    {{ end }}
+
+    <!-- Profile -->
+    {{ partial "components/eyebrow" (dict "text" "Profile") }}
+    {{ range .Params.profile }}
+        <p class="leading-normal mb-4">{{ . }}</p>
+    {{ end }}
 {{ end }}
 {{ define "scripts" }}
 {{ end }}

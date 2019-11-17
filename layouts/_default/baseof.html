@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   {{ partial "modules/html-header.html" . }}
-  <body>
+  <body class="bg-blue text-white px-8 font-sans">
     {{ partial "modules/global-header.html" . }}
-    <main>
+    <main class="mx-auto max-w-md">
       {{ block "main" . }}
       {{ end }}
     </main>
